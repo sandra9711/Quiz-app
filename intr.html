@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="scrpt.js"></script>
+    </head>
+    <body>
+        <div class="hdf">
+            <h1>WEB QUIZ</h1>
+        </div>
+        <form  class="fc1" name="fm">
+            <fieldset>
+                <legend><b>Participant details</b>
+                </legend>
+                firstname: <br>
+                <input id="fid1" type="text" name="firstname"  >
+                <br><br>
+                lastname:<br>
+                <input id= "fid2" type="text" name="lastname"  >
+                <br><br>
+                email id:<br>
+                <input id="fid3" type="email" name="mail id"  ><br><br>
+                <button type="submit" onclick="fn()">SUBMIT</button>
+            </fieldset>
+        </form>
+        <div class="divclass">
+            <p><b>Read the Instructions carefully before answering.</b></p>
+            <h2>Instructions</h2>
+            <ul>
+                <li>You have to select and SUBMIT answer for each question.</li>
+                <li>Some questions may have more than one options as correct answer.</li>
+                <li>You have to type answers when specified.</li>
+            </ul>
+        </div>
+        <form class="fc2" id="quizz" name="quizz">
+            <fieldset>
+                <legend><h3>QUIZ</h3></legend>
+                <p>1.Who is the founder of www consortium?</p>
+                <input id="q1a1" type="radio" name="a1" value="Tim Berners Lee">A.Tim Berners Lee<br><br>
+                <input id="q1a2" type="radio" name="a1" value="Caroline Baron">B.Caroline Baron<br><br>
+                <button type="submit" onclick="fn1()">SUBMIT</button>
+                <div class="sdiv">
+                    <h4 id="hfid">SCORE</h4>
+                </div>
+                <br>
+                <p>2.Which is the first graphic browser?</p>
+                <input id="q2a1" type="text" name="a2q" placeholder="Answer here"><br><br>
+                <button id="b2id" type="button" onclick="fn2()">SUBMIT</button><br><br>
+                <div class="sdiv">
+                    <h4 id="hfid2">SCORE</h4>
+                </div>
+                <p>3.Which of the following is part of URL?</p>
+                <input id="q3a1" type="radio" name="a3" value="Editor">A.Editor<br><br>
+                <input id="q3a2" type="radio" name="a3" value="Protocol">B.Protocol<br><br>
+                <button type="submit" onclick="fn3a()">SUBMIT</button>
+                <div class="sdiv">
+                    <h4 id="hfid3">SCORE</h4>
+                </div>
+                <br>
+                <p>4.URL stands for?</p>
+                <input id="q4a1" type="radio" name="a4" value="Uniform Resource Locator">A.Uniform Resource Locator<br><br>
+                <input id="q4a2" type="radio" name="a4" value="Universal Resource Locator">B.Universal Resource Locator<br><br>
+                <button type="submit" onclick="fn4e()">SUBMIT</button>
+                <div class="sdiv">
+                    <h4 id="hfid4">SCORE</h4>
+                </div>
+                <br>
+                <p>5.CSS was introduced for public use in?</p>
+                <input id="q5a1" type="text" name="a5q" placeholder="Answer here"><br><br>
+                <button id="b5id" type="button" onclick="fn5a()">SUBMIT</button><br><br>
+                <div class="sdiv">
+                    <h4 id="hfid5">SCORE</h4>
+                </div>
+                <p>6.The tags to create definitions are:</p>
+                <input id="q6a1" type="checkbox" name="a6" value="dd">A.dd<br><br>
+                <input id="q6a2" type="checkbox" name="a6" value="dt">B.dt<br><br>
+                <button type="submit" onclick="fn6u()">SUBMIT</button>
+                <div class="sdiv">
+                    <h4 id="hfid6">SCORE</h4>
+                </div>
+                <button id="bid" type="button" onclick="checkl()">GET YOUR SCORE HERE</button>
+
+            </fieldset>
+        </form>
+        <div id="after_submit">
+            <h3 id="a_sb">Good Job.You finished the Quiz.</h3>
+        </div>
+    </body>
+    <script>function fn(){
+        var d_1=document.getElementById("fid1");
+        var d_2=document.getElementById("fid2");
+        var d_3=document.getElementById("fid3");
+    
+        if(d_1.value==""){
+            alert("firstname should be filled.");
+        }
+        if(d_2.value==""){
+            alert("secondname should be filled.");
+    
+        }
+        if(d_3.value==""){
+            alert("email cannot be empty.");
+        }
+    }
+    score=0;
+    function fn1(){
+        
+        var a_1=document.getElementById("q1a1");
+        var a_2=document.getElementById("q1a2");
+        if(a_1.checked==true){
+            
+            
+            document.getElementById("hfid").innerHTML="SCORE-1   Keep going";
+            event.preventDefault()
+
+        
+        }else if(a_2.checked=true){
+            document.getElementById("hfid").innerHTML="SCORE-0   Try again";
+            event.preventDefault()
+        }
+
+    }
+    function fn2(){
+        var strng=document.getElementById("q2a1");
+        
+        if(strng.value=="Mosaic"){
+            
+            document.getElementById("hfid2").innerHTML="SCORE-1   Keep going";
+            event.preventDefault()
+        }else{
+            document.getElementById("hfid2").innerHTML="SCORE-0   Try again";
+            event.preventDefault()
+            
+        }
+        
+    }
+    function fn3a(){
+        var sr3=document.getElementById("q3a1");
+        var sa3=document.getElementById("q3a2");
+        if(sr3.checked==true){
+            document.getElementById("hfid3").innerHTML="SCORE-0   Try Again";
+            event.preventDefault()
+
+        }else if(sa3.checked==true){
+            document.getElementById("hfid3").innerHTML="SCORE-1   Keep going";
+            event.preventDefault()
+        }
+
+    }
+    function fn4e(){
+        var an1=document.getElementById("q4a1");
+        var an2=document.getElementById("q4a2");
+        if(an1.checked==true){
+            document.getElementById("hfid4").innerHTML="SCORE-1   Keep going";
+            event.preventDefault()
+        }else if(an2.checked==true){
+            document.getElementById("hfid4").innerHTML="SCORE-0   Try Again";
+            event.preventDefault()
+        }
+    }
+    function fn5a(){
+        var aq5=document.getElementById("q5a1");
+        if(aq5.value=="1996"){
+            document.getElementById("hfid5").innerHTML="SCORE-1   Keep going";
+            event.preventDefault()
+        }else{
+            document.getElementById("hfid5").innerHTML="SCORE-0   Try again";
+            event.preventDefault()
+
+        }
+    }
+    function fn6u(){
+        var ch1=document.getElementById("q6a1");
+        var ch2=document.getElementById("q6a2");
+        if((ch2.checked==true)&&(ch1.checked==true)){
+            document.getElementById("hfid6").innerHTML="SCORE-2   Keep going";
+            event.preventDefault()
+        }else if((ch2.checked==false)&&(ch1.checked==false)){
+            document.getElementById("hfid6").innerHTML="SCORE-0   Try again";
+            event.preventDefault()
+
+        }else if((ch1.checked==true) || (ch2.checked==true)){
+            document.getElementById("hfid6").innerHTML="SCORE-1   Keep going";
+            event.preventDefault()
+        }
+    }
+    function checkl(){
+        var c=0;
+        var ans1=document.quizz.a1.value;
+        var ans2=document.getElementById("q2a1").value;
+        var ans3=document.quizz.a3.value;
+        var ans4=document.quizz.a4.value;
+        var ans5=document.getElementById("q5a1").value;
+        var ans6=document.getElementById("q6a1");
+        var ans62=document.getElementById("q6a2");
+        if(ans1="Tim Berners Lee"){
+            c++
+            
+        }
+        if(ans2=="Mosaic"){
+            c++
+        }
+        if(ans3=="Protocol"){
+            c++
+        }
+        if(ans4=="Uniform Resource Locator"){
+            c++
+            
+        }
+        if(ans5=="1996"){
+            c++
+        }
+        if((ans6.checked==true)&&(ans62.checked==true)){
+            c=c+2;
+        }else if((ans6.checked==true)||(ans62.checked==true)){
+            c=c+1;
+        }
+        document.getElementById("after_submit").style.visibility="visible";
+        document.getElementById("after_submit").innerHTML="Your Score is "+c+" out of 7!";
+         
+    }
+     
+    </script>
+</html>

@@ -1,0 +1,78 @@
+.divclass{
+    border: 2px solid black;
+    background-color: rgb(190, 171, 145);
+    padding: 20px;
+}
+.fc1,.fc2{
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(204, 192, 175);
+}
+
+.sc{
+    font: outline;
+    padding: 10px;
+    background-color: lightgreen;
+}
+
+body{
+    padding: 50px;
+    background-image: url("qzwall.jpg");
+    background-repeat: no-repeat;
+	background-size: cover;
+    
+}
+
+button{
+    color: whitesmoke;
+    background-color: rgb(73, 46, 10);
+}
+.sdiv{
+    background-color: rgb(75, 224, 75);
+    color: darkgreen;
+}
+#after_submit{
+    visibility: hidden;
+    block-size: 30px;
+    background-color: lightgreen;
+    border: 3px solid darkgreen                                                                                                                                                                                                                                                                     
+}
+.hdf{
+    background-color: rgb(58, 41, 19);
+    color: whitesmoke;
+    text-align: center;
+} 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
